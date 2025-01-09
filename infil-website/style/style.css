@@ -1,0 +1,846 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e3f0ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #7cc4ff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.container {
+    display: flex; /* Pastikan ini ada */
+    flex-direction: row; /* Pastikan ini diatur ke row */
+    justify-content: space-between; /* Atur jarak antar elemen */
+    align-items: center; /* Atur agar elemen sejajar secara vertikal */
+}
+/* navigasi */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+nav ul li .btn-daftar {
+    background-color: #ffde59;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li .btn-daftar:hover {
+    background-color: tomato;
+    color: #fff;
+}
+/* banner utama */
+.banner {
+    background-color: #9bbff9;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.banner .text {
+    max-width: 60%;
+    text-align: center;
+}
+
+.banner img {
+    max-width: 30%;
+    height: auto;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    margin-bottom: 2rem;
+}
+
+.banner button {
+    background-color: #ffde59;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #333;
+    border-radius: 5px;
+}
+
+.banner button:hover {
+    background-color: tomato;
+}
+/* pengantar */
+.pengantar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #CCDAF7;
+}
+
+.pengantar .text {
+    max-width: 60%;
+    text-align: left;
+}
+
+.pengantar h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.pengantar p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.pengantar img {
+    max-width: 35%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* pendaftaran */
+.pendaftaran {
+    text-align: center;
+    padding: 2rem;
+    background-color: #9EBDFF;
+}
+
+.pendaftaran h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.pendaftaran p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.pendaftaran form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pendaftaran input {
+    width: 80%;
+    max-width: 400px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.pendaftaran input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.pendaftaran button {
+    background-color: #ffde59;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #333;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.pendaftaran button:hover {
+    background-color: tomato;
+    color: #fff;
+}
+/* fitur */
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature img {
+    width: 60%;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 2%;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+}
+/* card */
+.card-container {
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+}
+
+.card .images {
+    display: flex;
+    flex-direction: column; /* Atur gambar berdampingan */
+    justify-content: center;
+    gap: 20px; /* Jarak antar gambar */
+    margin-bottom: 15px;
+}
+
+.card img {
+    width: 45px; /* Sesuaikan lebar setiap gambar */
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #555;
+}
+/* daftar */
+#daftar button {
+    background-color: #ffde59;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #333;
+    border-radius: 5px;
+}
+
+#daftar button:hover {
+    background-color: tomato;
+}
+/* saran dan masukan */
+.feedback-section {
+    background-color: #d9e8f5;
+    padding: 100px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.feedback-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.feedback-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.feedback-item {
+    flex: 1;
+    min-width: 300px;
+}
+
+.feedback-item label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-wrapper {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    resize: none;
+    font-size: 14px;
+    color: #333;
+    background: none;
+    height: 50px;
+}
+
+.input-wrapper textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+/* footer */
+.footer {
+    position: relative; /* Untuk mengatur posisi anak elemen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #d6dff2;
+    height: 100vh;
+    padding: 20px 0;
+}
+.footer-links {
+    position: absolute; /* Posisi absolut untuk memindahkan ke kanan atas */
+    top: 20px; /* Jarak dari atas */
+    right: 20px; /* Jarak dari kanan */
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #000;
+}
+/* form daftar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d6dff2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-wrapper {
+    background: linear-gradient(to bottom, #7aa4e8, #4a6dbd);
+    border-radius: 20px;
+    padding: 40px;
+    flex: 1;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form label {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.submit-button {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f4ff35;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.google-button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    text-align: center;
+}
+
+.google-button:hover {
+    background-color: #f1f1f1;
+}
+/* form masuk */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d6dff2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-wrapper {
+    background: linear-gradient(to bottom, #7aa4e8, #4a6dbd);
+    border-radius: 20px;
+    padding: 40px;
+    flex: 1;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form label {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.forgot-password {
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.submit-button {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f4ff35;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.google-button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    text-align: center;
+}
+
+.google-button:hover {
+    background-color: #f1f1f1;
+}
+/* dashboard */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d6e4f0;
+    color: #333;
+    text-align: center;
+}
+
+.dashboard {
+    padding: 2rem;
+}
+
+.figure-container {
+    position: relative;
+    display: inline-block;
+}
+
+.figure-container img {
+    width: 300px;
+    height: auto;
+}
+
+.pointer {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Animasi pointer (efek berdenyut) */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+/* Tombol di bawah dashboard */
+.dashboard-btn {
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: #ffde59;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-btn:hover {
+    background-color: tomato;
+    color: #fff;
+}
+
+/* Animasi titik */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+/* Posisi interaktif */
+.point-head {
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.point-arm-left {
+    top: 40%;
+    left: 25%;
+}
+
+.point-arm-right {
+    top: 40%;
+    right: 25%;
+}
+
+.point-leg-left {
+    bottom: 15%;
+    left: 35%;
+}
+
+.point-leg-right {
+    bottom: 15%;
+    right: 35%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #bcd3ff;
+    padding: 20px;
+    display: none; /* Awalnya sidebar disembunyikan */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar.active {
+    display: flex; /* Sidebar muncul saat class 'active' ditambahkan */
+}
+
+.sidebar h3 {
+    margin-bottom: 1rem;
+}
+
+.menu-item {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #d1e4ff;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    background-color: #e3f0ff;
+    padding: 20px;
+    position: relative;
+}
+
+.menu-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.dashboard-content {
+    text-align: center;
+}
+
+.dashboard-content h2 {
+    margin-bottom: 1rem;
+}
+
+.interactive-image {
+    position: relative;
+}
+
+.interactive-image img {
+    max-width: 40%;
+    height: auto;
+}
+
+.interactive-button {
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.btn-footer {
+    background-color: #ffde59;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-footer:hover {
+    background-color: tomato;
+    color: #fff;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 10;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup h3 {
+    margin-bottom: 1rem;
+}
+
+.popup .level-button {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #d1e4ff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.popup .level-button:hover {
+    background-color: #bcd3ff;
+}
+
+.popup .close-popup {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.popup .close-popup:hover {
+    background-color: #ff1a1a;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.overlay.active {
+    display: block;
+}
