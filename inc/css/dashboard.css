@@ -1,0 +1,340 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e3f0ff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #79a4f3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: -350px; /* Sidebar tersembunyi di awal */
+    height: 100%;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0; /* Sidebar muncul ke posisi awal */
+}
+
+/* Tombol Toggle Sidebar */
+.menu-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1100; /* Di atas sidebar */
+}
+
+/* Tombol Close Sidebar */
+.close-sidebar {
+    position: absolute;
+    top: 30px; /* Memindahkan tombol ke atas */
+    right: 70px; /* Memindahkan tombol ke kanan */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#close-sidebar {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: rgb(5, 5, 5);
+    cursor: pointer;
+}
+
+/* Bagian Profile */
+.profile-section {
+    margin-top: 50px; /* Menjaga jarak setelah tombol Close Sidebar */
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.menu-section {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.menu-item {
+    background-color: white;
+    color: #333;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #d1e4ff;
+}
+
+.sidebar h3 {
+    margin-bottom: 1rem;
+}
+
+.menu-item {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #d1e4ff;
+}
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.main-content.menu-open {
+    margin-left: 250px; /* Menggeser konten utama saat sidebar terbuka */
+}
+
+.dashboard-content {
+    text-align: center;
+}
+
+.dashboard-content h2 {
+    margin-bottom: 1rem;
+}
+
+.figure-container img {
+    width: 300px;
+    height: auto;
+}
+
+.interactive-point {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 1.5s infinite;
+}
+
+.interactive-point:hover {
+    background-color: tomato;
+}
+
+.interactive-point::after {
+    content: "➤";
+    font-size: 1.2rem;
+    color: white;
+}
+
+.main-content.blur {
+    filter: blur(4px);
+    pointer-events: none; /* Nonaktifkan interaksi dengan konten saat sidebar terbuka */
+    transition: filter 0.3s ease; /* Animasi efek blur */
+}
+
+ /* Tombol di bawah dashboard */
+ .dashboard-btn {
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: #ffde59;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-btn:hover {
+    background-color: tomato;
+    color: #fff;
+}
+
+/* Animasi titik */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+/* Posisi interaktif */
+.point-head {
+    top: 22%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.point-arm-left {
+    top: 40%;
+    left: 43%;
+}
+
+.point-arm-right {
+    top: 40%;
+    right: 43%;
+}
+
+.point-leg-left {
+    bottom: 20%;
+    left: 47%;
+}
+
+.point-leg-right {
+    bottom: 30%;
+    right: 47%;
+}
+
+.btn-footer {
+    background-color: #ffde59;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-footer:hover {
+    background-color: tomato;
+    color: #fff;
+}
+
+.figure-container img {
+            width: 300px;
+            height: auto;
+        }
+
+        .interactive-point {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        .interactive-point:hover {
+            background-color: tomato;
+        }
+
+        .interactive-point::after {
+            content: "➤";
+            font-size: 1.2rem;
+            color: white;
+        }
+
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 10;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup h3 {
+    margin-bottom: 1rem;
+}
+
+.popup .level-button {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #d1e4ff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.popup .level-button:hover {
+    background-color: #bcd3ff;
+}
+
+.popup .close-popup {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.popup .close-popup:hover {
+    background-color: #ff1a1a;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.overlay.active {
+    display: block;
+}
